@@ -30,18 +30,18 @@ while read file; do
     fi
     files=()
     while [ ! -z "$file" ] && [ ! "." == "$file" ] && [ ! "/" == "$file" ]; do
-        file=$(dirname "$file")
         files=("$file" "${files[@]}")
+        file=$(dirname "$file")
     done
     for file in "${files[@]}"; do
         if [ ! -e "$file" ]; then
-            hash=$(git rev-list -n 1 HEAD -- "$file")
+            hash=$(git rev-list -n 1 HEAD -- "$file" | xargs)
             if [ ! -z $hash ]; then
                 git checkout $hash^ -- "$file"
             fi
         fi
     done
-done < <(git log --pretty=format: --name-only --diff-filter=A | sort -u)
+done < <(git log --pretty=format: --name-only --diff-filter=D | sort -u)
 
 if [ "false" == "$silent" ] && [ "false" == "$verbose" ]; then
     end_time=$(date +%s)
