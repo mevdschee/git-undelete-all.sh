@@ -3,7 +3,7 @@ verbose=false
 silent=false
 
 while getopts 'hsv' flag; do
-    case "${flag}" in
+    case "$flag" in
         v)  verbose=true ;;
         s)  silent=true ;;
         *)  echo "Usage git-undelete-all [OPTION...]"
