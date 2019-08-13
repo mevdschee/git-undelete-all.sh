@@ -18,12 +18,13 @@ done
 start_time=$(date +%s)
 file_count=0
 while read file; do
-    ((file_count++)) 
-    if [ "true" == "$verbose" ]; then
-        echo $file
-    fi
-    if [ "false" == "$silent" ] && [ "false" == "$verbose" ]; then
-        printf "\r$file_count files restored"
+    ((file_count++))
+    if [ "false" == "$silent" ]; then
+        if [ "true" == "$verbose" ]; then
+            echo $file
+        else
+            printf "\r$file_count files restored"
+        fi
     fi
     if [ -e "$file" ]; then
         continue
