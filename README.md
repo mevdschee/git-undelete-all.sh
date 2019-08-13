@@ -26,7 +26,7 @@ If you run with "-v" or "-s" the script will give more or no output.
 
 ### How it works
 
-It is automating (example on this repo) where "undelete.sh" is a deleted file:
+It is automating the following process (where "undelete.sh" is a deleted file):
 
 1) List the files that are deleted from the Github repository:
 
