@@ -36,7 +36,7 @@ It is automating the following process (where "undelete.sh" is a deleted file):
 
       `undelete.sh`
 
-3) Then get the hash of the commit in which a file is deleted:
+3) Then get the hash of the commit in which the file is deleted:
 
       `git rev-list -n 1 HEAD -- undelete.sh`
 
