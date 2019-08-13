@@ -35,9 +35,9 @@ while read file; do
     done
     for file in "${files[@]}"; do
         if [ ! -e "$file" ]; then
-            HASH=$(git rev-list -n 1 HEAD -- "$file")
-            if [ ! -z $HASH ]; then
-                git checkout $HASH^ -- "$file"
+            hash=$(git rev-list -n 1 HEAD -- "$file")
+            if [ ! -z $hash ]; then
+                git checkout $hash^ -- "$file"
             fi
         fi
     done
