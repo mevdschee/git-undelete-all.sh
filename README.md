@@ -22,7 +22,7 @@ It should output:
     $ bash git-undelete-all.sh 
     1 files restored in 0 seconds
 
-If you run with "-v" or "-s" the script will give more or no output.
+If you run with "-v" the script will print the filename of each undeleted file on a separate line.
 
 ### How it works
 
