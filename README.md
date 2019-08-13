@@ -13,13 +13,12 @@ This script can come in handy when evaluating the history of a repository.
 
 ### Usage
 
-Copy the script into the repository that you want to investigate and run:
+Copy the script into the repository that you want to undelete files in and run:
 
     bash git-undelete-all.sh
 
-It should output:
+It should output something like:
 
-    $ bash git-undelete-all.sh 
     1 files restored in 0 seconds
 
 If you run with "-v" the script will print the filename of each undeleted file on a separate line.
