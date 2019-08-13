@@ -48,4 +48,4 @@ It is automating (example on this repo) where "undelete.sh" is a deleted file:
 
       `git checkout ae85c23372a8a45b788ed857800b3b424b1c15f8^ -- undelete.sh`
 
-And doing that for every file in the list that is retrieved in step 1.
+And doing that for every file in the list that is retrieved in step 2.
