@@ -1,6 +1,6 @@
 # git-undelete-all.sh
 
-Script to undelete everything that is easy to undelete in the repo.
+Bash script to undelete everything that is easy to undelete in a Git repository.
 
     $ bash git-undelete-all.sh -h
     Usage git-undelete-all [OPTION...]
