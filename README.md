@@ -9,6 +9,8 @@ Script to undelete everything that is easy to undelete in the repo.
     -s  silent: do not print output
     -v  verbose: print every file recovered
     
+This script can come in handy when evaluating the quality of a repository.
+
 ### Usage
 
 Copy the script into the repository that you want to investigate and run:
