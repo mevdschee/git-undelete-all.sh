@@ -24,7 +24,7 @@ If you run with "-v" or "-s" the script will give more or no output.
 
 ### How it works
 
-It is automating:
+It is automating (example on this repo) where "undelete.sh" is a deleted file:
 
 1) List the files that are deleted from the Github repository:
 
@@ -32,14 +32,14 @@ It is automating:
 
 2) Then get the hash of the commit in which a file is deleted:
 
-    git rev-list -n 1 HEAD -- some_deleted_file.txt
+    git rev-list -n 1 HEAD -- undelete.sh
 
 3) Which gives you the hash of the undeletion:
 
-    f885b71ee65611bbae0989e37cb0b2def1947c38
+    ae85c23372a8a45b788ed857800b3b424b1c15f8
 
 4) Now you can checkout the version of the file before the deletion:
 
-    git checkout f885b71ee65611bbae0989e37cb0b2def1947c38^ -- some_deleted_file.txt
+    git checkout ae85c23372a8a45b788ed857800b3b424b1c15f8^ -- undelete.sh
 
 And doing that for every file in the list that is retrieved in step 1.
